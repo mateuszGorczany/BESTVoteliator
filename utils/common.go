@@ -8,6 +8,8 @@ var (
 	ErrorNotImplementedYet = errors.New("Not implemented yet.")
 )
 
+type ID_t int64
+
 type Stream [T any]struct {
 	value []T
 }

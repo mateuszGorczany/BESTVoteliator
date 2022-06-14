@@ -1,11 +1,14 @@
 package repository
 
-import "github.com/mateuszGorczany/BESTVoteliator/internal/datastruct"
+import (
+	"github.com/mateuszGorczany/BESTVoteliator/internal/datastruct"
+	common "github.com/mateuszGorczany/BESTVoteliator/utils"
+)
 
 type VoteQuery interface {
-	CreateVote() (id int64, err error)
-	GetVote() (*datastruct.Vote, error)
+	CreateVote(datastruct.Vote) (id common.ID_t, err error)
+	GetVote(id common.ID_t) (*datastruct.Vote, error)
 	GetVotes() ([]*datastruct.Vote, error)
 	UpdateVote() *datastruct.Vote
-	DeleteVote() (id int64)
+	DeleteVote(id common.ID_t) common.ID_t
 }

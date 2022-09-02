@@ -1,3 +1,7 @@
-vendor/*
-cmd/cmd
-tmp/*
+./frontend/.env
+./frontend/.env.local
+./frontend/node_modules
+./frontend/dist
+./frontend/
+.cache
+./backend/.air.toml

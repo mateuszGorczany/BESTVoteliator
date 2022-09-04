@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Navbar from "./components/Navbar"
 import HomePage from "./components/HomePage/Home"
-import Votings from "./components/HomePage/Votings"
+import Voting from "./components/VotingPage/Voting"
 import AboutPage from './components/AboutPage/AboutPage'
 import CreatePage from './components/CreatePage/CreatePage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/votings" element={<Votings />} />
+          <Route path="/voting" element={<Voting />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/create" element={<CreatePage />} />
         </Routes>

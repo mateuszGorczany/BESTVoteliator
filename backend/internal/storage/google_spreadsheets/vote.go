@@ -13,20 +13,17 @@ type voteQuery struct {
 
 func (v *voteQuery) CreateVote(vote datastruct.Vote) (id common.ID_t, err error) {
 	fmt.Print("Create vote query ccalled from voteQuery\n")
-	var i int = 0
-	return common.ID_t(i), nil
+	return common.ID_t(""), nil
 }
 
 func (v *voteQuery) GetVote(id common.ID_t) (*datastruct.Vote, error) {
 	fmt.Print("Create vote query ccalled from voteQuery\n")
 	return &datastruct.Vote{
-		ID:     int64(1234),
-		UserID: int64(4566),
+		UserID: "456",
 	}, nil
 }
 
-func (v *voteQuery) GetVotes() ([]*datastruct.Vote, error) {
-
+func (v *voteQuery) GetVotes(pollID common.ID_t) ([]*datastruct.Vote, error) {
 	return []*datastruct.Vote{{}, {}}, nil
 }
 
@@ -35,6 +32,6 @@ func (v *voteQuery) UpdateVote() *datastruct.Vote {
 	return &datastruct.Vote{}
 }
 
-func (v *voteQuery) DeleteVote(id common.ID_t) common.ID_t {
-	return 0
+func (v *voteQuery) DeleteVote(id common.ID_t) (common.ID_t, error) {
+	return "", nil
 }

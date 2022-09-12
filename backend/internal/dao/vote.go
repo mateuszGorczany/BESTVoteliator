@@ -7,8 +7,8 @@ import (
 
 type VoteQuery interface {
 	CreateVote(datastruct.Vote) (id common.ID_t, err error)
-	GetVote(id common.ID_t) (*datastruct.Vote, error)
-	GetVotes() ([]*datastruct.Vote, error)
+	GetVote(voteID common.ID_t) (*datastruct.Vote, error)
+	GetVotes(pollID common.ID_t) ([]*datastruct.Vote, error)
 	UpdateVote() *datastruct.Vote
-	DeleteVote(id common.ID_t) common.ID_t
+	DeleteVote(voteID common.ID_t) (common.ID_t, error)
 }

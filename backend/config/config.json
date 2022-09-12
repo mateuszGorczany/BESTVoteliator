@@ -1,0 +1,18 @@
+{
+    "ServiceHost": "0.0.0.0:8080",
+    "ServiceAddress": "0.0.0.0",
+    "Google_OAuth_Client_ID": "1026540081820-jcq9odlpbi214a97fu7ar4furb3njfmf.apps.googleusercontent.com",
+    "test": {
+        "UserEmail": "Mateusz.Gorczany@best.krakow.pl"
+    },
+    "Database": {
+        "Sheets": {
+            "SheetID": "1pl-MqjFebhLKDL51B1D9qXgG1J3Yr7dq7b7XaM63yJY",
+            "Credentials": "/home/mateusz/projects/BESTVoteliator/backend/config/bestvoteliator-361500-7f0eeec22d74.json"
+        },
+        "Firebase": {
+            "Credentials": "/home/mateusz/projects/BESTVoteliator/backend/config/bestvoteliator-firebase-adminsdk-9dset-5ae4729b9d.json",
+            "ProjectID": "bestvoteliator"
+        }
+    }
+}

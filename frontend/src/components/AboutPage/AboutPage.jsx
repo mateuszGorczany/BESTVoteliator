@@ -3,7 +3,7 @@ function AboutPage() {
     return (
         <div>
             <h2>
-                o strone
+                Strona do tworzenia głosowań
             </h2>
         </div>
     )

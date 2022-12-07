@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: bestvoteliator-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bestvoteliator-frontend 
+  template:
+    metadata:
+      labels:
+        app: bestvoteliator-frontend 
+    spec:
+      containers:
+        - name: bestvoteliator-frontend
+          image: docker.io/library/front-dev:latest 
+          imagePullPolicy: Never
+          ports: 
+          - containerPort: 1234
+          env: 
+            - name: SERVICE_PORT
+              value: "1234"

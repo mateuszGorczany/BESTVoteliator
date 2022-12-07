@@ -1,0 +1,15 @@
+<!-- index.html -->
+{{if .Success}}
+    <h1>Thanks for your message!</h1>
+{{else}}
+    <h1>Contact</h1>
+    <form method="POST">
+        <label>Name:</label><br />
+        <input type="text" name="firstname"><br />
+        <label>Lastname:</label><br />
+        <input type="text" name="lastname"><br />
+        <label>Age:</label><br />
+        <input type="number" name="age"></input><br />
+        <input type="submit">
+    </form>
+{{end}}
